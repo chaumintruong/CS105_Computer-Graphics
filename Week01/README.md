@@ -22,7 +22,7 @@ In this week, we approach two algorithms to draw a line which are
 
 4. Adding class <Line_Agorithm> to implement these algorithms
 
-5. Using funct <Ondraw> in "Draw_Line.view" to call funct <DDA> and <Bresenham> for drawing a line 
+5. Using funct <Ondraw> tag in "Draw_Line.view" to call funct <DDA> and <Bresenham> for drawing a line 
 
 
 
