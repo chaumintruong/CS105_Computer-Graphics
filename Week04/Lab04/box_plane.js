@@ -1,4 +1,13 @@
 var scene = new THREE.Scene();
+
+var draw_box = Box(1, 1, 1);
+var draw_plane = Plane(4, 4);
+
+draw_plane.rotation.x = 90;
+
+scene.add(draw_box);
+scene.add(draw_plane);
+
 var camera = new THREE.PerspectiveCamera(
     75,
     window.innerWidth/ window.innerHeight,
@@ -37,11 +46,8 @@ function Box(w, h, d){
     return mesh;
 }
 
-var draw_box = Box(1, 1, 1);
-scene.add(draw_box);
-
-function Plane(size){
-    var geometry = new THREE.PlaneGeometry(size, size);
+function Plane(w, h){
+    var geometry = new THREE.PlaneGeometry(w, h);
     var material = new THREE.MeshBasicMaterial({
         color: (255, 255, 0)
     });
@@ -51,8 +57,3 @@ function Plane(size){
     );
     return mesh;
 }
-
-var draw_plane = Plane(4);
-scene.add(draw_plane);
-
-draw_plane.rotation.x = 90;
